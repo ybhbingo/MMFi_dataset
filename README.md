@@ -142,7 +142,9 @@ The train/test split of your code. There are already 3 splits which are used in 
 
 These two options define the parameters which are used to construct your dataloaders. We keep these two options open so that you could customize freely.&#x20;
 
-## <span id=activity_list>Activities Included</span>
+## More Details about MMFi Dataset
+
+### <span id=activity_list>Activities Included</span>
 
 MMFi dataset constains two types of actions: _**daily activities**_ and _**rehabilitation activities**_.&#x20;
 
@@ -176,7 +178,7 @@ MMFi dataset constains two types of actions: _**daily activities**_ and _**rehab
 | A26      | Jumping up                   | Rehabilitation activities |
 | A27      | Bowing                       | Daily activities          |
 
-## Subjects and Environments
+### Subjects and Environments
 
 _**40 volunteers**_ (11 females and 29 males) aging from 23 to 40 participated in the data collection of MMFi. We appreciate their kind assitance in the completion of this work!&#x20;
 
