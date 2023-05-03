@@ -1,10 +1,10 @@
 # MMFi Dataset Instructions
 
-## About MMFi\_dataset
+## Introduction
 
 MM-Fi is the first multi-modal non-intrusive 4D human pose estimation dataset with 27 daily or rehabilitation action categories, which bridges the gap between wireless sensing and high-level human perception tasks. MM-Fi consists of over 320k synchronized frames of five modalities from 40 human subjects. Various annotations are provided to support potential sensing tasks, e.g.,  human pose estimation and action recognition. Extensive experiments have been conducted to compare the sensing capacity of each or several modalities in terms of multiple tasks. We envision that MM-Fi can contribute to wireless sensing research with respect to action recognition, human pose estimation, multi-modal learning, cross-modal supervision, and interdisciplinary healthcare research.
 
-For more details and demos about MMFi dataset, please refer to _**[MMFi](https://ntu-aiot-lab.github.io/mm-fi).**_
+For more details and demos about MMFi dataset, please refer to _**[[Project Page]](https://ntu-aiot-lab.github.io/mm-fi)**_ and _**[[Paper]]().**_
 
 Please download the dataset at _**download\_link.**_
 
