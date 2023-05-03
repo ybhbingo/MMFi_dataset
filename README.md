@@ -1,4 +1,4 @@
-# Toolbox for MMFi Dataset
+# Toolbox for MM-Fi Dataset
 
 ## Introduction
 
