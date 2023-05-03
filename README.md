@@ -186,4 +186,4 @@ In addition, the 40 volunteers were divided into 4 groups corresponding to 4 dif
 
 ## Reference
 
-Please refer to the following paper when using this dataset. Thank you for your support!&#x20;
+Please refer to the following paper if you find MMFi dataset and toolbox benefit your research. Thank you for your support!&#x20;
