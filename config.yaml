@@ -1,0 +1,64 @@
+modality: wifi-csi
+
+protocol: protocol2
+
+data_unit: frame
+
+random_split:
+  ratio: 0.8
+  random_seed: 0
+  train_dataset:
+    split: training
+    scenes: None
+    subjects: None
+    actions: all
+  val_dataset:
+    split: validation
+    scenes: None
+    subjects: None
+    actions: all
+
+cross_scene_split:
+  train_dataset:
+    split: training
+    scenes: [ E01, E02, E03 ]
+    subjects: None
+    actions: all
+  val_dataset:
+    split: validation
+    scenes: [ E04 ]
+    subjects: None
+    actions: all
+
+cross_subject_split:
+  train_dataset:
+    split: training
+    scenes: None
+    subjects: [ S01, S02, S03, S04, S06, S07, S08, S09, S11, S12, S13, S14, S16, S17, S18, S19, S21, S22, S23, S24, S26, S27, S28, S29, S31, S32, S33, S34, S36, S37, S38, S39 ]
+    actions: all
+  val_dataset:
+    split: validation
+    scenes: None
+    subjects: [ S05, S10, S15, S20, S25, S30, S35, S40 ]
+    actions: all
+
+manual_split:
+  train_dataset:
+    split: training
+    scenes: None
+    subjects: [S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25, S26, S27, S28, S29, S30, S31, S32, S33, S34, S35, S36, S37, S38, S39, S40]
+    actions: [A01, A02, A03, A04, A05, A06, A07, A08, A09, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20, A21]
+  val_dataset:
+    split: validation
+    scenes: None
+    subjects: [S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19, S20, S21, S22, S23, S24, S25, S26, S27, S28, S29, S30, S31, S32, S33, S34, S35, S36, S37, S38, S39, S40]
+    actions: [A22, A23, A24, A25, A26, A27]
+
+split_to_use: random_split
+
+init_rand_seed: 0
+train_loader:
+  batch_size: 32
+validation_loader:
+  batch_size: 1
+output_folder: ./ckpt/
