@@ -71,7 +71,7 @@ pip install python torch torchvision pyyaml numpy scipy opencv-python
 
 Once the environment is built successfully, please download the dataset from _**this link**_.&#x20;
 
-After unzip, the dataset directory structure should be as follows.&#x20;
+After unziping all four parts, the dataset directory structure should be as follows.&#x20;
 
 #### Dataset Directory Structure
 
