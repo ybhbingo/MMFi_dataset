@@ -6,7 +6,7 @@ MM-Fi is the first multi-modal non-intrusive 4D human pose estimation dataset wi
 
 For more details and demos about MMFi dataset, please refer to _**[[Project Page]](https://ntu-aiot-lab.github.io/mm-fi)**_ and _**[[Paper]]().**_
 
-Please download the dataset through _**[[Google Drive]](https://drive.google.com/drive/folders/1zDbhfH3BV-xCZVUHmK65EgVV1HMDEYcz?usp=sharing)**_ or _**[[Baidu Cloud]]()**_.
+<span id=download>Please download the dataset</span> through _**[[Google Drive]](https://drive.google.com/drive/folders/1zDbhfH3BV-xCZVUHmK65EgVV1HMDEYcz?usp=sharing)**_ or _**[[Baidu Cloud]]()**_.
 
 ## Quick Start for MMFi Toolbox
 
@@ -29,7 +29,7 @@ pip install python torch torchvision pyyaml numpy scipy opencv-python
 
 ### Step 2
 
-Once the environment is built successfully, download the compressed dataset;
+Once the environment is built successfully, download the [dataset](#download);
 
 After unziping all four parts, the dataset directory structure should be as follows.&#x20;
 
