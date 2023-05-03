@@ -95,46 +95,6 @@ cd your_project_dir
 python your_script_name.py path_to_dataset_dir your_config.yaml
 ```
 
-## <span id=activity_list>Activities Included</span>
-
-MMFi dataset constains two types of actions: _**daily activities**_ and _**rehabilitation activities**_.&#x20;
-
-| Activity | Description                  | Category                  |
-| -------- | ---------------------------- | ------------------------- |
-| A01      | Stretching and relaxing      | Rehabilitation activities |
-| A02      | Chest expansion(horizontal)  | Daily activities          |
-| A03      | Chest expansion (vertical)   | Daily activities          |
-| A04      | Twist (left)                 | Daily activities          |
-| A05      | Twist (right)                | Daily activities          |
-| A06      | Mark time                    | Rehabilitation activities |
-| A07      | Limb extension (left)        | Rehabilitation activities |
-| A08      | Limb extension (right)       | Rehabilitation activities |
-| A09      | Lunge (toward left-front)    | Rehabilitation activities |
-| A10      | Lunge (toward right-front)   | Rehabilitation activities |
-| A11      | Limb extension (both)        | Rehabilitation activities |
-| A12      | Squat                        | Rehabilitation activities |
-| A13      | Raising hand (left)          | Daily activities          |
-| A14      | Raising hand (right)         | Daily activities          |
-| A15      | Lunge (toward left side)     | Rehabilitation activities |
-| A16      | Lunge (toward right side)    | Rehabilitation activities |
-| A17      | Waving hand (left)           | Daily activities          |
-| A18      | Waving hand (right)          | Daily activities          |
-| A19      | Picking up things            | Daily activities          |
-| A20      | Throwing (toward left side)  | Daily activities          |
-| A21      | Throwing (toward right side) | Daily activities          |
-| A22      | Kicking (toward left side)   | Daily activities          |
-| A23      | Kicking (toward right side)  | Daily activities          |
-| A24      | Body extension (left)        | Rehabilitation activities |
-| A25      | Body extension (right)       | Rehabilitation activities |
-| A26      | Jumping up                   | Rehabilitation activities |
-| A27      | Bowing                       | Daily activities          |
-
-## Subjects and Environments
-
-_**40 volunteers**_ (11 females and 29 males) aging from 23 to 40 participated in the data collection of MMFi. We appreciate their kind assitance in the completion of this work!&#x20;
-
-In addition, the 40 volunteers were divided into 4 groups corresponding to 4 different environmental settings so that _**cross-domain**_ research could be conducted for the WiFi sensing.&#x20;
-
 ## <span id=keys_description>Description of Keys in Configuration</span>
 
 <mark style="color:green;">**`modality`**</mark>
@@ -181,6 +141,46 @@ The train/test split of your code. There are already 3 splits which are used in 
 <mark style="color:green;">**`train_loader`**</mark>    <mark style="color:green;">**`validation_loader`**</mark>
 
 These two options define the parameters which are used to construct your dataloaders. We keep these two options open so that you could customize freely.&#x20;
+
+## <span id=activity_list>Activities Included</span>
+
+MMFi dataset constains two types of actions: _**daily activities**_ and _**rehabilitation activities**_.&#x20;
+
+| Activity | Description                  | Category                  |
+| -------- | ---------------------------- | ------------------------- |
+| A01      | Stretching and relaxing      | Rehabilitation activities |
+| A02      | Chest expansion(horizontal)  | Daily activities          |
+| A03      | Chest expansion (vertical)   | Daily activities          |
+| A04      | Twist (left)                 | Daily activities          |
+| A05      | Twist (right)                | Daily activities          |
+| A06      | Mark time                    | Rehabilitation activities |
+| A07      | Limb extension (left)        | Rehabilitation activities |
+| A08      | Limb extension (right)       | Rehabilitation activities |
+| A09      | Lunge (toward left-front)    | Rehabilitation activities |
+| A10      | Lunge (toward right-front)   | Rehabilitation activities |
+| A11      | Limb extension (both)        | Rehabilitation activities |
+| A12      | Squat                        | Rehabilitation activities |
+| A13      | Raising hand (left)          | Daily activities          |
+| A14      | Raising hand (right)         | Daily activities          |
+| A15      | Lunge (toward left side)     | Rehabilitation activities |
+| A16      | Lunge (toward right side)    | Rehabilitation activities |
+| A17      | Waving hand (left)           | Daily activities          |
+| A18      | Waving hand (right)          | Daily activities          |
+| A19      | Picking up things            | Daily activities          |
+| A20      | Throwing (toward left side)  | Daily activities          |
+| A21      | Throwing (toward right side) | Daily activities          |
+| A22      | Kicking (toward left side)   | Daily activities          |
+| A23      | Kicking (toward right side)  | Daily activities          |
+| A24      | Body extension (left)        | Rehabilitation activities |
+| A25      | Body extension (right)       | Rehabilitation activities |
+| A26      | Jumping up                   | Rehabilitation activities |
+| A27      | Bowing                       | Daily activities          |
+
+## Subjects and Environments
+
+_**40 volunteers**_ (11 females and 29 males) aging from 23 to 40 participated in the data collection of MMFi. We appreciate their kind assitance in the completion of this work!&#x20;
+
+In addition, the 40 volunteers were divided into 4 groups corresponding to 4 different environmental settings so that _**cross-domain**_ research could be conducted for the WiFi sensing.&#x20;
 
 ## Reference
 
