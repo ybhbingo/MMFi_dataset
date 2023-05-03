@@ -121,11 +121,7 @@ rng_generator = torch.manual_seed(config['init_rand_seed'])
 train_loader = make_dataloader(train_dataset, is_training=True, generator=rng_generator, **config['train_loader'])
 val_loader = make_dataloader(val_dataset, is_training=False, generator=rng_generator, **config['validation_loader'])
 
-# TODO Settings, e.g., your model, optimizer, device, ...
-
-# TODO: Codes for training (and model save if necessary)
-
-# TODO: Codes for test (if necessary) 
+# Coding
 
 ```
 
