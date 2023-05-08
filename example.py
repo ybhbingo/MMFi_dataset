@@ -1,12 +1,12 @@
 import os
 import argparse
+
 import yaml
 import numpy as np
 import torch
 
 from mmfi_lib.mmfi import make_dataset, make_dataloader
 from mmfi_lib.evaluate import calulate_error
-
 
 
 
@@ -31,8 +31,10 @@ if __name__ == '__main__':
 
 
     # TODO: Codes for training (and saving models)
-
-
+    # Just an example for illustration.
+    for batch_idx, batch_data in enumerate(train_loader):
+        # Please check the data structure here.
+        print(batch_data['output'])
 
     # TODO: Codes for test (if)
 

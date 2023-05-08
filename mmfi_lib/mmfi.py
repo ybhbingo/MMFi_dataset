@@ -92,11 +92,17 @@ class MMFi_Database:
 
     def load_database(self):
         for scene in sorted(os.listdir(self.data_root)):
+            if scene.startswith("."):
+                continue
             self.scenes[scene] = {}
             for subject in sorted(os.listdir(os.path.join(self.data_root, scene))):
+                if subject.startswith("."):
+                    continue
                 self.scenes[scene][subject] = {}
                 self.subjects[subject] = {}
                 for action in sorted(os.listdir(os.path.join(self.data_root, scene, subject))):
+                    if action.startswith("."):
+                        continue
                     self.scenes[scene][subject][action] = {}
                     self.subjects[subject][action] = {}
                     if action not in self.actions.keys():
@@ -143,8 +149,20 @@ class MMFi_Dataset(Dataset):
         else:
             raise ValueError('Subject does not exist in this dataset.')
 
+    def get_data_type(self, mod):
+        if mod in ["rgb", 'infra1', "infra2"]:
+            return ".npy"
+        elif mod in ["lidar", "mmwave"]:
+            return ".bin"
+        elif mod in ["depth"]:
+            return ".png"
+        elif mod in ["wifi-csi"]:
+            return ".mat"
+        else:
+            raise ValueError("Unsupported modality.")
+
     def load_data(self):
-        data_info = tuple()
+        data_info = []
         for subject, actions in self.data_source.items():
             for action in actions:
                 if self.data_unit == 'sequence':
@@ -158,7 +176,7 @@ class MMFi_Dataset(Dataset):
                     for mod in self.modality:
                         data_dict[mod+'_path'] = os.path.join(self.data_base.data_root, self.get_scene(subject), subject,
                                                          action, mod)
-                    data_info += (data_dict,)
+                    data_info.append(data_dict)
                 elif self.data_unit == 'frame':
                     frame_num = 297
                     for idx in range(frame_num):
@@ -172,11 +190,12 @@ class MMFi_Dataset(Dataset):
                                      }
                         data_valid = True
                         for mod in self.modality:
-                            data_dict[mod+'_path'] = os.path.join(self.data_base.data_root, self.get_scene(subject), subject, action, mod, sorted(os.listdir(os.path.join(self.data_base.data_root, self.get_scene(subject), subject, action, mod)))[idx])
+                            data_dict[mod+'_path'] = os.path.join(self.data_base.data_root, self.get_scene(subject), subject, action, mod, "frame{:03d}".format(idx+1) + self.get_data_type(mod))
+
                             if os.path.getsize(data_dict[mod+'_path']) == 0:
                                 data_valid = False
                         if data_valid:
-                            data_info += (data_dict,)
+                            data_info.append(data_dict)
                 else:
                     raise ValueError('Unsupport data unit!')
         return data_info
@@ -315,26 +334,30 @@ def make_dataset(dataset_root, config):
 def collate_fn_padd(batch):
     '''
     Padds batch of variable length
-
-    note: it converts things ToTensor manually here since the ToTensor transform
-    assume it takes in images rather than arbitrary tensors.
     '''
-    
-    input_modalities = list(batch[0].keys())[-1]
-    ## get kpts
-    kpts = []
-    [kpts.append(np.array(t['output'])) for t in batch]
-    kpts = torch.FloatTensor(np.array(kpts))
-    ## get sequence lengths
-    lengths = torch.tensor([t[input_modalities].shape[0] for t in batch ])
-    ## padd
-    batch = [torch.Tensor(t[input_modalities]) for t in batch ]
-    batch = torch.nn.utils.rnn.pad_sequence(batch)
-    ## compute mask
-    batch = batch.permute(1,0,2)
-    mask = (batch != 0)
 
-    return batch, kpts, lengths, mask
+    batch_data = {'modality': batch[0]['modality'],
+                  'scene': [sample['scene'] for sample in batch],
+                  'subject': [sample['subject'] for sample in batch],
+                  'action': [sample['action'] for sample in batch],
+                  'idx': [sample['idx'] for sample in batch]
+                  }
+    _output = [np.array(sample['output']) for sample in batch]
+    _output = torch.FloatTensor(np.array(_output))
+    batch_data['output'] = _output
+
+    for mod in batch_data['modality']:
+        if mod in ['mmwave', 'lidar']:
+            _input = [torch.Tensor(sample['input_' + mod]) for sample in batch]
+            _input = torch.nn.utils.rnn.pad_sequence(_input)
+            _input = _input.permute(1, 0, 2)
+            batch_data['input_' + mod] = _input
+        else:
+            _input = [np.array(sample['input_' + mod]) for sample in batch]
+            _input = torch.FloatTensor(np.array(_input))
+            batch_data['input_' + mod] = _input
+
+    return batch_data
 
 def make_dataloader(dataset, is_training, generator, batch_size, collate_fn_padd = collate_fn_padd):
     loader = DataLoader(
