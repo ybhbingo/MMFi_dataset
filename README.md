@@ -188,12 +188,10 @@ In addition, the 40 volunteers were divided into 4 groups corresponding to 4 dif
 
 Please cite the following paper if you find MMFi dataset and toolbox benefit your research. Thank you for your support!&#x20;
 ```
-@misc{yang2023mmfi,
+@article{yang2023mmfi,
       title={MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset for Versatile Wireless Sensing}, 
-      author={Jianfei Yang and He Huang and Yunjiao Zhou and Xinyan Chen and Yuecong Xu and Shenghai Yuan and Han Zou and Chris Xiaoxuan Lu and Lihua Xie},
-      year={2023},
-      eprint={2305.10345},
-      archivePrefix={arXiv},
-      primaryClass={eess.SP}
+      author={Yang, Jianfei and Huang, He and Zhou, Yunjiao and Chen, Xinyan and Xu, Yuecong and Yuan, Shenghai and Zou, Han and Lu, Chris, Xiaoxuan and Xie, Lihua},
+      journal={arXiv preprint arXiv:2305.10345}
+      year={2023}
 }
 ```
