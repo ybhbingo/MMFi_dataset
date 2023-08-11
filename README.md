@@ -106,7 +106,7 @@ python your_script_name.py path_to_dataset_dir your_config.yaml
 
     Please use one of the followings:
 
-    **rgb**, **infra1**, **infra2**, **depth**, **lidar**, **radar**, **wifi-csi**
+    **rgb**, **infra1**, **infra2**, **depth**, **lidar**, **mmwave**, **wifi-csi**
 
     > `Note` that every modality should be in `lowercase`.
     >
@@ -115,7 +115,7 @@ python your_script_name.py path_to_dataset_dir your_config.yaml
 
     Please use `|` to connect different modalities.
 
-    > `Note` that `space` is not allowed in the connection. For example, `wifi-csi|radar` is OK, but `wifi-csi | radar` will not be accepted.
+    > `Note` that `space` is not allowed in the connection. For example, `wifi-csi|mmwave` is OK, but `wifi-csi | mmwave` will not be accepted.
 
 <mark style="color:green;">**`data_unit`**</mark>
 
