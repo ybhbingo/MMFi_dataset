@@ -232,9 +232,14 @@ class MMFi_Dataset(Dataset):
         elif mod == 'wifi-csi':
             for csi_mat in sorted(glob.glob(os.path.join(dir, "frame*.mat"))):
                 data_mat = scio.loadmat(csi_mat)['CSIamp']
-                # data_frame = []
-                # for i in range(data_mat.shape[2]):
-                #     data_frame.append(data_mat[..., i].flatten())
+                data_mat[np.isinf(data_mat)] = np.nan
+                for i in range(10):  # 32
+                    temp_col = data_mat[:, :, i]
+                    nan_num = np.count_nonzero(temp_col != temp_col)
+                    if nan_num != 0:
+                        temp_not_nan_col = temp_col[temp_col == temp_col]
+                        temp_col[np.isnan(temp_col)] = temp_not_nan_col.mean()
+                data_mat = (data_mat - np.min(data_mat)) / (np.max(data_mat) - np.min(data_mat))
                 data_frame = np.array(data_mat)
                 data.append(data_frame)
             data = np.array(data)
@@ -262,20 +267,14 @@ class MMFi_Dataset(Dataset):
                 # data = data[:, :3]
         elif mod == 'wifi-csi':
             data = scio.loadmat(frame)['CSIamp']
-            data[np.isinf(scio.loadmat(frame)['CSIamp'])] = np.nan
+            data[np.isinf(data)] = np.nan
             for i in range(10):  # 32
                 temp_col = data[:, :, i]
                 nan_num = np.count_nonzero(temp_col != temp_col)
                 if nan_num != 0:
                     temp_not_nan_col = temp_col[temp_col == temp_col]
                     temp_col[np.isnan(temp_col)] = temp_not_nan_col.mean()
-            # csi_amp = temp_col
-            # df_csi_amp = pd.DataFrame(csi_amp)
-            # pd.DataFrame.fillna(methode='ffill')
-            # csi_amp = df_csi_amp.values
-
-            data = torch.tensor((data - np.min(data)) / (np.max(data) - np.min(data)))
-            data = np.array(data)
+            data = (data - np.min(data)) / (np.max(data) - np.min(data))
         else:
             raise ValueError('Found unseen modality in this dataset.')
         return data
@@ -340,7 +339,7 @@ def collate_fn_padd(batch):
                   'scene': [sample['scene'] for sample in batch],
                   'subject': [sample['subject'] for sample in batch],
                   'action': [sample['action'] for sample in batch],
-                  'idx': [sample['idx'] for sample in batch]
+                  'idx': [sample['idx'] for sample in batch] if 'idx' in batch[0] else None
                   }
     _output = [np.array(sample['output']) for sample in batch]
     _output = torch.FloatTensor(np.array(_output))
