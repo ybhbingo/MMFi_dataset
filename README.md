@@ -187,6 +187,10 @@ _**40 volunteers**_ (11 females and 29 males) aging from 23 to 40 participated i
 
 In addition, the 40 volunteers were divided into 4 groups corresponding to 4 different environmental settings so that _**cross-domain**_ research could be conducted for the WiFi sensing.&#x20;
 
+### Action Segments
+
+We have also extracted the action segments from the raw sequences, with relevant information stored into a .csv form, which can be referred to in the [dataset directory](#download). 
+
 ## Reference
 
 Please cite the following paper if you find MMFi dataset and toolbox benefit your research. Thank you for your support!&#x20;
