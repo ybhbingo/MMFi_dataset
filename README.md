@@ -5,9 +5,11 @@
 
 ## Introduction
 
-MM-Fi is the first multi-modal non-intrusive 4D human pose estimation dataset with 27 daily or rehabilitation action categories for high-level wireless human sensing tasks. MM-Fi consists of over 320k synchronized frames of five modalities from 40 human subjects in four domains. The annotations include 2D/3D human pose keypoints, 3D position, 3D dense pose, and the category of action. **It is published in NeurIPS 2023 Datasets and Benchmarks Track**. 
+MM-Fi is the first multi-modal non-intrusive 4D human pose estimation dataset with 27 daily or rehabilitation action categories for high-level wireless human sensing tasks. MM-Fi consists of over 320k synchronized frames of five modalities from 40 human subjects in four domains. The annotations include 2D/3D human pose keypoints, 3D position, 3D dense pose, and the category of action. 
 
-For more details and demos about MMFi dataset, please refer to _**[[Project Page]](https://ntu-aiot-lab.github.io/mm-fi)**_ and _**[[Paper]](https://arxiv.org/abs/2305.10345).**_
+**MM-Fi has been published in NeurIPS 2023 Datasets and Benchmarks Track** _**[[Paper]](https://arxiv.org/abs/2305.10345)**_. 
+
+For more details and demos about MMFi dataset, please refer to _**[[Project Page]](https://ntu-aiot-lab.github.io/mm-fi)**_.
 
 <span id=download>Please download the dataset</span> through _**[[Google Drive]](https://drive.google.com/drive/folders/1zDbhfH3BV-xCZVUHmK65EgVV1HMDEYcz?usp=sharing)**_ or _**[[Baidu Netdisk]](https://pan.baidu.com/s/1IU9okQzdeCIaF7xCr1X_pw?pwd=t316)**_.
 
