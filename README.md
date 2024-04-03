@@ -1,5 +1,5 @@
 ![Maintenance](https://img.shields.io/badge/Maintained%3F-YES-green.svg)
-[![DOI](https://zenodo.org/badge/607070690.svg)](https://zenodo.org/badge/latestdoi/607070690)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7983467.svg)](https://doi.org/10.5281/zenodo.7983467)
 
 # Toolbox for MM-Fi Dataset
 
