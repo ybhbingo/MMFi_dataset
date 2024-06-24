@@ -13,6 +13,8 @@ For more details and demos about MMFi dataset, please refer to _**[[Project Page
 
 <span id=download>Please download the dataset</span> through _**[[Google Drive]](https://drive.google.com/drive/folders/1zDbhfH3BV-xCZVUHmK65EgVV1HMDEYcz?usp=sharing)**_ or _**[[Baidu Netdisk]](https://pan.baidu.com/s/1IU9okQzdeCIaF7xCr1X_pw?pwd=t316)**_.
 
+(The RGB images with face mosaiced have been updated into the Google Drive)
+
 ## Quick Start for MMFi Toolbox
 
 To get started, follow the instructions in this section. We will introduce the simple steps and how you can customize the configuration.&#x20;
