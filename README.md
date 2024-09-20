@@ -11,9 +11,9 @@ MM-Fi is the first multi-modal non-intrusive 4D human pose estimation dataset wi
 
 For more details and demos about MMFi dataset, please refer to _**[[Project Page]](https://ntu-aiot-lab.github.io/mm-fi)**_.
 
-<span id=download>Please download the dataset</span> through _**[[Google Drive]](https://drive.google.com/drive/folders/1zDbhfH3BV-xCZVUHmK65EgVV1HMDEYcz?usp=sharing)**_ or _**[[Baidu Netdisk]](https://pan.baidu.com/s/1IU9okQzdeCIaF7xCr1X_pw?pwd=t316)**_.
+<span id=download>Please download the dataset</span> through _**[[Google Drive]](https://drive.google.com/drive/folders/1zDbhfH3BV-xCZVUHmK65EgVV1HMDEYcz?usp=sharing)**_ or _**[[Baidu Netdisk]](https://pan.baidu.com/s/1IU9okQzdeCIaF7xCr1X_pw?pwd=t316)**_. 
 
-(*The RGB images have been included in Google Drive now. No need to submit application forms.*)
+*The anonymized RGB images can be downloaded from _**[[Ali Cloud]](https://mmfi-dataset.oss-ap-southeast-1.aliyuncs.com/anonymized_rgb_images/all_images.zip)**_.
 
 ## Quick Start for MMFi Toolbox
 
