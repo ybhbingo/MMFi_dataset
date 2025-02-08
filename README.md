@@ -182,7 +182,7 @@ MMFi dataset constains two types of actions: _**daily activities**_ and _**rehab
 | A23      | Kicking (toward right side)  | Daily activities          |
 | A24      | Body extension (left)        | Rehabilitation activities |
 | A25      | Body extension (right)       | Rehabilitation activities |
-| A26      | Jumping up                   | Rehabilitation activities |
+| A26      | Jumping jack                 | Rehabilitation activities |
 | A27      | Bowing                       | Daily activities          |
 
 ### Subjects and Environments
