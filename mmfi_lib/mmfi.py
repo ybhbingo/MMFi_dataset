@@ -210,8 +210,8 @@ class MMFi_Dataset(Dataset):
             data = np.array(data)
         elif mod == 'depth':
             for img in sorted(glob.glob(os.path.join(dir, "frame*.png"))):
-                _cv_img = cv2.imread(img, cv2.IMREAD_UNCHANGED)  # Default depth value is 16-bit
-                _cv_img *= 0.001  # Convert unit to meter
+                # Default depth value is 16-bit, convert unit to meter
+                _cv_img = cv2.imread(img, cv2.IMREAD_UNCHANGED) * 0.001
                 data.append(_cv_img)
             data = np.array(data)
         elif mod == 'lidar':
