@@ -5,8 +5,8 @@ import yaml
 import numpy as np
 import torch
 
-from mmfi_lib.mmfi import make_dataset, make_dataloader
-from mmfi_lib.evaluate import calulate_error
+from mmfi_dataset.mmfi import make_dataset, make_dataloader
+from mmfi_dataset.evaluate import calulate_error
 
 
 

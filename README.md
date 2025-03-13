@@ -31,7 +31,7 @@ Please make sure you have installed the following dependencies before using MMFi
 Quick installation of depedencies (in one local or vitual environment)
 
 ```
-pip install python torch torchvision pyyaml numpy scipy opencv-python
+pip install git+https://github.com/ybhbingo/MMFi_dataset
 ```
 
 ### Step 2

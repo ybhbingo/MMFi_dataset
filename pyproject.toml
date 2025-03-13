@@ -1,0 +1,35 @@
+[project]
+name = "mmfi-dataset"
+version = "0.0.1"
+description = """
+MM-Fi is the first multi-modal non-intrusive 4D human pose estimation dataset with 27 daily or rehabilitation action categories for high-level wireless human sensing tasks. MM-Fi consists of over 320k synchronized frames of five modalities from 40 human subjects in four domains. The annotations include 2D/3D human pose keypoints, 3D position, 3D dense pose, and the category of action. 
+"""
+authors = [
+    {name = "Yang, Jianfei"},
+    {name = "Huang, He"},
+    {name = "Zhou, Yunjiao"},
+    {name = "Chen, Xinyan"},
+    {name = "Xu, Yuecong"},
+    {name = "Yuan, Shenghai"},
+    {name = "Lu, Chris Xiaoxuan"},
+    {name = "Xie, Lihua"},
+
+]
+readme = "README.md"
+requires-python = ">= 3.10.13"
+dependencies= [
+    "torch",
+    "torchvision",
+    "pyyaml",
+    "numpy",
+    "scipy",
+    "opencv-python",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
+
